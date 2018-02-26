@@ -1,0 +1,35 @@
+﻿<!DOCTYPE html>
+<html ng-app="myApp">
+<head>
+    <title>Angular js practice</title>
+	<meta charset="utf-8" />
+    <script src="scripts/angular.js"></script>
+    <script src="scripts/angular-cookies.js"></script>
+</head>
+<body>
+    <div ng-controller="calculateController" ng-submit="calculateResult(number1,number2,operation)">
+        <form class="form-group" >
+            <label for="Number1">Enter Num1</label>
+            <input type="number" class="form-control" placeholder="Please enter first number" ng-model="number1"/>
+            <br /> <br />
+            <label for="Number2">Enter Num2</label>
+            <input type="number" class="form-control" placeholder="Please enter first number" ng-model="number2"/>
+            <br /> <br />
+            <label for="Operation">Select Operation</label>
+            <select ng-model="operation">
+                <option selected="selected" value="Add">Add</option>
+                <option value="Substract">Substract</option>
+                <option value="Multiply">Multiply</option>
+                <option value="Divide">Divide</option>
+            </select>
+            <br />
+            <br />
+            <button type="submit">Calculate</button>
+            <br /><br />
+            <label for="Result"></label>
+            Result  : {{result}}
+        </form>
+    </div>
+    <script src="myAppController.js"></script>
+</body>
+</html>
